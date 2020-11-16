@@ -83,6 +83,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "browser-localstorage-expire": "^1.5.0",
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
     "enquirer": "^2.3.1",
