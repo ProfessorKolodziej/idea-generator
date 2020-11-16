@@ -1,0 +1,35 @@
+// Some frontend developers prefer to keep layout styles in a partial, like this.
+
+.content-container {
+	margin: 0 auto;
+	max-width: 900px;
+	padding: 1em;
+
+	@media screen and (min-width: 768px) {
+		display: grid;
+		grid-gap: 3em;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 2em 1em 5em;
+	}
+}
+
+.page-heading {
+	grid-column: span 3;
+}
+
+.introduction {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+// Huh. Wouldn't it be nice if we didn't have to repeat this?
+// With partials, you don't have to. Create a color variables
+// partial and include it at the top.
+
+$blue: #4261ab;
+
+.promotion {
+	background: lighten($blue, 50%);
+	border: 1px solid $blue;
+	padding: 2em;
+}

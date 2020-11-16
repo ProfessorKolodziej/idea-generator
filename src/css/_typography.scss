@@ -1,0 +1,48 @@
+// You can still use import to import a stylesheet from Google Fonts.
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Encode+Sans+Semi+Condensed:wght@700&display=swap');
+
+// Your typography styles here.
+
+body {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	font-family: 'Encode Sans Semi Condensed', sans-serif;
+	line-height: 1.3;
+	margin-top: 0;
+}
+
+// You can type two slashes to create a comment in Sass.
+
+// An example of a variable. Try changing it.
+// Most people put their variables in a _colors.scss partial to
+// help keep them organized and in one place across files.
+// This makes it easier to work together!
+
+$ocean-blue: #1b6e97;
+
+h1 {
+	color: $ocean-blue;
+}
+
+a {
+	color: $ocean-blue;
+}
+
+aside {
+	font-size: 0.8em;
+}
+
+ul,
+ol {
+	padding-left: 2em;
+}

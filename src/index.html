@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Description here" />
+	<title>Student Site Boilerplate</title>
+</head>
+<body>
+	<main class="content-container">
+		<h1 class="page-heading">Student Site Boilerplate: An Introduction to a Professional Web Development Workflow</h1>
+		<article class="introduction">
+			<h2>What do professional web development workflows usually have?</h2>
+			<ul>
+				<li>A text editor (VSCode or other text editor of your choice)</li>
+				<li>A version control system (Git/Github)</li>
+				<li>A way to access that version control system (Command line, Tower)</li>
+				<li>A package manager (such as npm), which requires <a href="https://nodejs.org/en/">node.js</a> to be installed</li>
+				<li>Build tools that let you use the latest and greatest technology, which makes your life easier (Linters such as Stylelint and ESLint, compilers such as Sass and Babel, and module bundlers such as Webpack)</li>
+			</ul>
+			<p>Most importantly, these tools are here to <strong>help and support you!</strong> You don't need to be an expert in them or even really understand them. There are people whose entire jobs are to put together tooling like this. That's not your job in this class, and that's why you're going to use a <strong>modern boilerplate</strong> so you don't have to do that work.</p>
+			<p><strong>You can write the exact same HTML and CSS you're used to in this boilerplate if you want - but this template will allow you to explore some helpful new additions to your web development toolkit.</strong></p>
+			<h2>A basic introduction to Sass (SCSS)</h2>
+			<p>Whoa. What's <a href="https://sass-lang.com/guide">Sass</a>? It's a preprocessor for CSS. It adds some really helpful tools that help you stay sane when you're writing more complicated CSS. The standard syntax for Sass is called SCSS, and it is written so that you can write plain old CSS - just like you're used to now! - right in an scss file, or you can use some new, helpful tools, like variables.</p>
+			<p>We're only going to learn the helpful parts of Sass in this class: <a href="https://sass-lang.com/guide#topic-4">partials</a>, <a href="https://sass-lang.com/guide#topic-2">variables</a>, <a href="https://sass-lang.com/guide#topic-3">nesting</a>, and inline media queries.</p>
+			<p>This starter template allows you to work in Sass if you like. We won't be learning a lot of Sass in class, but you are welcome to explore it on your own. The file extension for Sass is <em>scss</em>. Whether you choose to use Sass or not, you will be writing your styles in the src/css/styles.scss file.</p>
+			<p>Technically, Sass is a compiled language. That means it goes through a preprocessor, and becomes regular CSS at the end. This template takes care of the build process for you, so you can explore using Sass if you want to organize your CSS into smaller, more manageable chunks.</p>
+			<p>I personally love Sass - it makes my life so much easier! I wrote the <a href="https://sass-lang.com/guide#topic-7">Extend/Inhertiance</a> part of the Sass documentation. So as you can tell, Sass means a lot to me! But it is also an industry standard, so it is good for you to be aware of it. Don't feel like you have to learn it all - or even any of it! Only use the parts that help your team.</p>
+			<h3>Steps to try</h3>
+			<ol>
+				<li>Resize this browser. What is changing at each breakpoint?</li>
+				<li>Look at src/css/styles.scss. What is new about what you see? What looks familiar?</li>
+				<li>Examine each new element one at a time. What is it for? Where is it coming from?</li>
+				<li>Change one color variable.</li>
+				<li>Add a new partial for your homepage styles.</li>
+			</ol>
+			<h2>Why are we learning about Github?</h2>
+			<p>There's so much to learn in web development today! That said, learning version control systems - especially Git, and the website Github - allows you to collaborate with a whole world of other web developers. You can even get involved with and contribute to the projects you are passionate about!</p>
+			<p>You don't need to be a programmer to be a great contributor. I contributed to the Sass documentation because I love working with Sass, and I could see some places where it could be improved. You can see the two pull requests I opened to contribute to <a href="https://sass-lang.com/guide">https://sass-lang.com/guide</a> below.</p>
+			<ul>
+				<li><a href="https://github.com/sass/sass-site/pull/194">Clarifies directory syntax in sass command</a></li>
+				<li><a href="https://github.com/sass/sass-site/pull/193">Use placeholders in extend documentation</a></li>
+			</ul>
+			<p>What's super cool about this is I've never actually met or even spoken to the two people who approved my pull request. But by being genuinely helpful, I've made a personal connection to them and their project, so they may remember me later on. This is a great way to get involved and network in the web development community. Giving back your code to the community and making it open (so anyone can contribute to and modify it) is a big part of <strong>open source development</strong>. It helps the web grow and change quickly.</p>
+			<h2>Linting: Like Autograding, but for the real world</h2>
+			<p>In the first part of this semester, we used Autograding to help catch errors and make sure our code passed certain tests for an assignment.</p>
+			<p>In professional web development, this is a lot like <strong>linting</strong> your code to make sure it adheres to <strong>coding standards</strong>. Coding standards keep code consistent among teams. As a class, we will adhere to the <a href="https://github.com/stylelint/stylelint-config-standard">Stylelint Standard Configuration</a>, which uses a common set of coding standards that Google, Airbnb, and many other companies use. I have modified one rule, which is that I would like you to use tabs instead of spaces for indentation. They are much easier to edit and manage than spaces.</p>
+			<p>You should reference <a href="https://stylelint.io/user-guide/rules/list">this list of rules</a> when you see linting errors.</p>
+			<p>In the real world, there isn't Autograding - because every project is different, just like everyone's final project will be different, so there would be no way for me to write tests like "make sure you have at least one ordered list tag". Consider linting your new Autograding, and keep your code neat, tidy, and consistent!</p>
+			<h2>Editing and Connecting to Github</h2>
+			<p>You will want to connect to Github to make the most of this boilerplate.</p>
+			<ol>
+				<li>Start your assignment on Github.</li>
+				<li>Make sure you've followed the instructions in <a href="https://docs.google.com/document/d/14usTx6c1L1MwSjRvwtk4spz40EDgHV50_53kKAiHzcM/edit?usp=sharing">Set up your Development Environment</a> at least once.</li>
+				<li>Watch <a href="https://mymedia.bu.edu/media/clone-from-github/1_np80rd8u">"How to clone your repository to Tower"</a> to understand how to clone your assignment from Github to your computer.</li>
+				<li>Watch <a href="https://mymedia.bu.edu/media/edit-your-code/1_9udqvfmj">"How to start coding in VSCode"</a> to see how to edit your assignment in VSCode</li>
+				<li>Watch <a href="https://mymedia.bu.edu/media/push-changes/1_h2djlpkh">"How to commit and push changes"</a> to see how to save and push your changes back to Github where I can see them.</li>
+			</ol>
+		</article>
+		<aside class="promotion">
+			<h2>Already know what you're doing?</h2>
+			<p>Feel free to get right in and editing!</p>
+			<ol>
+				<li>Learn more about this repository and how to use it <a href="https://github.com/ProfessorKolodziej/student-site-boilerplate">on Github</a>.</li>
+				<li>Navigate to your repository directory and run <strong>npm run start</strong>.</li>
+				<li>Delete the content in <strong>src/index.html</strong>.</li>
+				<li>Delete the content in <strong>src/css/styles.scss</strong>.</li>
+				<li>Run <strong>npm run deploy</strong> when you are ready to deploy your site to Github Pages!</li>
+				<li>Check your styles and JavaScript for errors manually using <strong>npm run lint</strong>, or fix errors as you work.</li>
+			</ol>
+			<h3>Special thanks</h3>
+			<p>Special thanks to <a href="https://staticsiteboilerplate.com/">Static Site Boilerplate</a>, which this repository is based on.</p>
+		</aside>
+	</main>
+</body>
+</html>

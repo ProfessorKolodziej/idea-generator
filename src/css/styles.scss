@@ -1,0 +1,46 @@
+// Load CSS Reset from NPM
+// CSS resets "normalize" how browser styles are applied.
+// Try uncommenting this and saving. What changes in the browser?
+@import "~normalize.css";
+
+// An example of a partial.
+// Check out the _typography.scss file to edit the CSS inside!
+@import "typography";
+@import "layout";
+
+// You can still write styles in this file too.
+// Here's an example of how you could write media queries more easily with Sass.
+
+$large-phone: 500px;
+$tablet-vertical: 768px;
+$desktop: 1200px;
+
+// And some color variables.
+// Look how much easier it is to keep track of what these are than hex codes!
+
+$red: #ab424a;
+$orange: #dd7c00;
+$green: #3b975f;
+$blue: #4261ab;
+
+.page-heading {
+	color: $red;
+
+	// Sass lets you write your media queries inline if you want.
+	// This is why I'm always forgetting I have to put the class inside
+	// the media query in regular CSS. I never have to in Sass!
+	// I like combining these with variables to make it easier to read
+	// my media queries.
+
+	@media screen and (min-width: $large-phone) {
+		color: $orange;
+	}
+
+	@media screen and (min-width: $tablet-vertical) {
+		color: $green;
+	}
+
+	@media screen and (min-width: $desktop) {
+		color: $blue;
+	}
+}
