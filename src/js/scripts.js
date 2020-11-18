@@ -26,8 +26,12 @@ function getRandomNumber(max) {
 }
 
 function addMarkup(data) {
-  const first = getRandomNumber(storedData.items.length);
-  const second = getRandomNumber(storedData.items.length);
+  let first = getRandomNumber(storedData.items.length);
+  let second = getRandomNumber(storedData.items.length);
+
+  while ( first === second ) {
+    second = getRandomNumber(storedData.items.length);
+  }
   
   container.innerHTML += createIdeaMarkup(data.items[first]);
   container.innerHTML += createIdeaMarkup(data.items[second]);
