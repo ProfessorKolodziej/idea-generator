@@ -7,6 +7,7 @@ import browserLocalstorage from 'browser-localstorage-expire';
 const localCache = browserLocalstorage();
 let storedData = localCache.getItem('apiData');
 const container = document.querySelector('#js-ideasResults');
+const button = document.querySelector('#js-ideasButton');
 
 // Goal: Return HTML with data from item
 function createIdeaMarkup(item) {
@@ -25,7 +26,9 @@ function getRandomNumber(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-function addMarkup(data) {
+function addMarkup() {
+  container.innerHTML = '';
+  
   let first = getRandomNumber(storedData.items.length);
   let second = getRandomNumber(storedData.items.length);
 
@@ -33,8 +36,8 @@ function addMarkup(data) {
     second = getRandomNumber(storedData.items.length);
   }
   
-  container.innerHTML += createIdeaMarkup(data.items[first]);
-  container.innerHTML += createIdeaMarkup(data.items[second]);
+  container.innerHTML += createIdeaMarkup(storedData.items[first]);
+  container.innerHTML += createIdeaMarkup(storedData.items[second]);
 }
 
 function getData() {
@@ -50,7 +53,7 @@ function getData() {
       console.log(data);
       storedData = data;
       localCache.setItem('apiData', storedData);
-      addMarkup(storedData);
+      addMarkup();
     });
 }
 
@@ -60,8 +63,10 @@ if (storedData === null) {
   getData();
 } else {
   console.log('It was stored');
-  addMarkup(storedData);
+  addMarkup();
 }
+
+button.addEventListener('click', addMarkup);
 
 // Goal: showing TWO random bookmarks from my stored data
 // Do this each time the button is clicked
