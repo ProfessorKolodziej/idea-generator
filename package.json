@@ -90,6 +90,7 @@
     "figlet": "^1.2.3",
     "ftp-deploy": "^2.3.3",
     "jquery": "^3.5.1",
+    "lottie-web": "^5.7.4",
     "normalize.css": "^8.0.1",
     "reset-css": "^4.0.1",
     "sanitize.css": "^11.0.0",

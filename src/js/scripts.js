@@ -1,5 +1,7 @@
 import browserLocalstorage from 'browser-localstorage-expire';
 
+import lottie from 'lottie-web';
+
 // Add your scripts here
 // Goal: storing the API data for a certain amount of time
 // so I don't have to wait for the API call every single time
@@ -28,6 +30,14 @@ function getRandomNumber(max) {
 
 function addMarkup() {
   container.innerHTML = '';
+
+  lottie.loadAnimation({
+    container: button, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '38788-infinity-worms.json' // the path to the animation json
+  });
   
   let first = getRandomNumber(storedData.items.length);
   let second = getRandomNumber(storedData.items.length);
@@ -38,6 +48,9 @@ function addMarkup() {
   
   container.innerHTML += createIdeaMarkup(storedData.items[first]);
   container.innerHTML += createIdeaMarkup(storedData.items[second]);
+
+  lottie.destroy();
+  button.innerHTML = "Generate Again";
 }
 
 function getData() {
