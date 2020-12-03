@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://professorkolodziej.github.io/static-site-boilerplate//sitemap.xml
+Host: https://professorkolodziej.github.io
