@@ -41,7 +41,7 @@ strong {
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 30px;
 
-	@media screen and ( min-width: 650px ) {
+	@media screen and (min-width: 650px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
@@ -74,7 +74,7 @@ $spacing: 20px;
 	color: #fff;
 	display: inline-block;
 	text-decoration: none;
-	padding: .5em 1em;
+	padding: 0.5em 1em;
 	margin-bottom: $spacing;
 }
 

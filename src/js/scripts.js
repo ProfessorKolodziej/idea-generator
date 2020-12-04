@@ -28,14 +28,14 @@ function getRandomNumber(max) {
 
 function addMarkup() {
   container.innerHTML = '';
-  
-  let first = getRandomNumber(storedData.items.length);
+
+  const first = getRandomNumber(storedData.items.length);
   let second = getRandomNumber(storedData.items.length);
 
-  while ( first === second ) {
+  while (first === second) {
     second = getRandomNumber(storedData.items.length);
   }
-  
+
   container.innerHTML += createIdeaMarkup(storedData.items[first]);
   container.innerHTML += createIdeaMarkup(storedData.items[second]);
 }
@@ -63,6 +63,7 @@ if (storedData === null) {
   getData();
 } else {
   console.log('It was stored');
+  console.log(storedData);
   addMarkup();
 }
 
