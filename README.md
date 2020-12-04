@@ -10,6 +10,8 @@ You will need to add a .env file with your oAuth token in the root of the projec
 OAUTH_TOKEN=YOUR-TOKEN-HERE
 ```
 
+See [Raindrop.io's API documentation](https://developer.raindrop.io/v1/authentication/token) for more details.
+
 ## Installation
 
 Clone or download this repository using your favorite method (Command Line, GUI such as Tower, etc)
