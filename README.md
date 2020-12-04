@@ -2,6 +2,14 @@
 
 This Idea Generator app fetches bookmarks from your collection on raindrops.io and creates an idea generator from them.
 
+## Requirements
+
+You will need to add a .env file with your oAuth token in the root of the project. Use the `OAUTH_TOKEN` variable like so:
+
+```
+OAUTH_TOKEN=YOUR-TOKEN-HERE
+```
+
 ## Installation
 
 Clone or download this repository using your favorite method (Command Line, GUI such as Tower, etc)
