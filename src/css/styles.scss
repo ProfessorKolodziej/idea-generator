@@ -133,7 +133,7 @@ $plus-size: 100px;
 }
 
 .ideas-button {
-	background: #EA0F46;
+	background: #ea0f46;
 	margin-top: $spacing;
 	border: none;
 }
@@ -165,7 +165,7 @@ $grad-color: #087353;
 	}
 }
 
-$grad-color: #EA0F46;
+$grad-color: #ea0f46;
 
 .tag-aesthetics {
 	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + 0.1), #022c7a 90%);
@@ -177,7 +177,7 @@ $grad-color: #EA0F46;
 	}
 }
 
-$grad-color: #0F875D;
+$grad-color: #0f875d;
 
 .tag-design {
 	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + 0.1), #700460 90%);
