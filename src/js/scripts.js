@@ -89,6 +89,7 @@ function getData() {
         getData();
       } else {
       // Cache in localStorage and expire it weekly.
+        console.log(storedData);
         localCache.setItem('apiData', storedData, 10080);
         addMarkup();
       }

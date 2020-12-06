@@ -40,18 +40,16 @@ strong {
 
 .raindrop-button {
 	background: #66d0fc;
-	text-decoration: none;
-	color: black;
-	box-shadow: 5px 5px 0 darken(#1a1333, 10%);
 	border-radius: 5px;
+	box-shadow: 5px 5px 0 darken(#1a1333, 10%);
 	color: #1a1333;
 	display: inline-block;
-	text-decoration: none;
-	padding: 0.5em 1em;
-	margin-bottom: 0;
-	line-height: 24px;
 	float: right;
 	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 0;
+	padding: 0.5em 1em;
+	text-decoration: none;
 
 	&::before {
 		content: '';
