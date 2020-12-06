@@ -13,25 +13,16 @@ const button = document.querySelector('#js-ideasButton');
 function createTagMarkup(item) {
   let tagMarkup = '';
 
-  item.tags.forEach(
-    tag => {
-      console.log(tag);
-      tagMarkup += `<span>${tag}</span>`;
-    }
-  );
+  item.tags.forEach((tag) => { tagMarkup += `<span>${tag}</span>`; });
 
   return tagMarkup;
 }
 
-// Goal: Return HTML with tags from item data
+// Goal: Return HTML with classes from item data
 function createClasses(item) {
   let classes = '';
 
-  item.tags.forEach(
-    tag => {
-      classes += ` tag-${tag}`;
-    }
-  );
+  item.tags.forEach((tag) => { classes += ` tag-${tag}`; });
 
   return classes;
 }
@@ -71,21 +62,38 @@ function addMarkup() {
   container.innerHTML += createIdeaMarkup(storedData.items[second]);
 }
 
+let page = 0;
+const itemLimit = 50;
+
 function getData() {
-  fetch('https://api.raindrop.io/rest/v1/raindrops/15045214?perpage=50', {
+  fetch(`https://api.raindrop.io/rest/v1/raindrops/15045214?page=${page}&perpage=${itemLimit}`, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${process.env.OAUTH_TOKEN}`,
     },
   })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      // Goal: Save the data
+  .then((response) => response.json())
+  .then((data) => {
+
+    // Store the data initially, then append items from later queries.
+    if (storedData === null) {
       storedData = data;
-      localCache.setItem('apiData', storedData);
+    } else {
+      let tempArray = storedData.items.concat(data.items);
+      storedData.items = tempArray;
+    }
+
+    // Get items recursively until we run out of pages.
+    // Then, cache and store it.
+    if (data.items.length === itemLimit) {
+      page++;
+      getData();
+    } else {
+      // Cache in localStorage and expire it weekly.
+      localCache.setItem('apiData', storedData, 10080);
       addMarkup();
-    });
+    }
+  });
 }
 
 // Check if the data has been saved
