@@ -38,6 +38,32 @@ strong {
 	padding: 50px;
 }
 
+.raindrop-button {
+	background: #66d0fc;
+	text-decoration: none;
+	color: black;
+	box-shadow: 5px 5px 0 darken(#1a1333, 10%);
+	border-radius: 5px;
+	color: #1a1333;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	margin-bottom: 0;
+	line-height: 24px;
+	float: right;
+	font-size: 16px;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAAYCAMAAADZALOlAAABgFBMVEUAAABxK6nNXfm5R+y7R+3bbP+sROR+MqPKV/OzQe1pJqyJNcfPWv2/SPK2Q/GpQOaJM8qfPtW6Q+67TOyjPdJ/Mq6fOufKX/KCL9aiO+anRdGjQdi3Q+ySNN6KObNhI6Z0LKOyROm/Ue3ES/y/Tu5tJ6/JTfu0Q+m7T+qrRt2CL8phI5/LZfFiI6LKV/p6K8GKN7G0Seu/TvrQXP65TezMWv3FWvDFU/vVZP+3SPixRurAUO6xRPa2SuunQOe3TOvEUfvGVfyqQui6S/nJWPy7Tu2nP/SjPObBVO7IVf2uRenLYPG+Uu2pQeiLMuCALtnMWvGWOO/aY/+dOuWiO/KsQvWRNOK9T+2cOfFuJ7GYN+OVNuK0ROu1RvehO+amPefJUfzDUPuaOOSIMd/NVP3IVvC9S+13K8WJM+urRt2lRNbHTfypPuiMObTGTPy7SeyzQuu5R+y4Q+y5S+ytQOm8R/mxQerDUu9vKqCgPOW2TOyAMbC2R+u4SOzCSfuiPOb09z2kAAAAMXRSTlMAILu7NP0h/oiIVhDMVZnuuXfuZS93u3fumVa1zOrIgMDezNKo7u5E7syZ7u6Z7u7uaW+cTwAAAvJJREFUeF6d02V320gYBeAxyGuH7CRONugkDXazJAYjMzOEmcpdpr++o3dGznHd2kmfzzr3Xh3pRYCanLLMzFgck+irTW6Zd3bM9i8mWFfeUytW1POcEdbNe2rz8wmO94Z3V17714ywvzbcX/CfS5g9oN6USqXLS/vzR8waDScVplJRBhN23xIHv5W8Vzrrc0fs/ku85iv8hW4gYeNX8PYSN4AXqJ/10xFu1G+TduAGYgL1c38kUldvDEvPG+H+heAvTgyfJDig4cF79Q7845Wy/V/ENDjC3Z8ADWqvgleYvgSbw/kA4n+DD9msJFn6IqYHR8z2JcyoIB0CaYZRFDN6tHhMJLUDnZbKprxe796oEVuoZ+qQ8J0SPMNjPyLD+HySOvNrOkFqgiePGLf4qITM6WKKCB4DjqikpmUwVooTTx4x5TNwIKTECETZqsRRMOf/iOVTH4jm9+ZvnzTCVid8YVGOYiqfJkSGJnx3BqpCJg8igl/HSlkplXphw68xasRiAtTTnAqiaRkojMLzEzgBzXd0VX8+AI41FuRwA4aPYHrUiHlSIavEIRcCosLr9Etc7WKNSOAYBFhB0/2ZzRHTaHnUCGdNFz0k1FDsFOPCDE/gd11oYN38f7ojNkUqMlKTsowasYRWa1hC9QGZj3FAESkzQi5cUaj+AYL+DJWLU3vINXzEFnK1sLoPhGWOEmMUvpK180LhvAoyGm2IsILBicaGj9hAa+VWq1wH3GmUktMGfEam7UKhWAVshMgEc0GDC40vDB2xjEw/lcs3dRCiDVxMDBuWEUJj1+fFLv5xOpE8CAhSLuinbufwA0NHLOGEYvmmlsCiKhFT+LBMxecQ9kO7eI7/nEYyAHJNf8+tB05oyIiXkHB9U8YVNZ8KRFHuETwIjO23i91OIw/3ERRYKnP3at1EHlj40oiX9IHt604t0VIPdeFYiOLYO48JEaa19f3fqW8erc8hyjTnWh0c4VyeRo8J2+32X+BVz88eSPgfX0jnfXSPSEgAAAAASUVORK5CYII=) no-repeat 0 0;
+		background-size: cover;
+		width: 22px;
+		height: 16px;
+		margin-right: 5px;
+	}
+}
+
 .ideas-results {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -186,5 +212,16 @@ $grad-color: #0f875d;
 	.idea-learnmore {
 		background: $grad-color;
 		box-shadow: 5px 5px 0 darken($grad-color, 20%);
+	}
+}
+
+.credits {
+	color: lighten(#1a1333, 50%);
+	margin: 30px auto;
+	font-size: 14px;
+	text-align: center;
+
+	a {
+		color: inherit;
 	}
 }
