@@ -13,6 +13,8 @@ $tablet-vertical: 768px;
 $desktop: 1200px;
 
 body {
+	background: #2a3144;
+	color: #fff;
 	font-family: 'Encode Sans', sans-serif;
 	font-size: 18px;
 	line-height: 1.5;
@@ -39,46 +41,116 @@ strong {
 .ideas-results {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	grid-gap: 30px;
+	grid-gap: 100px;
+	min-height: 500px;
+	margin: 30px auto;
+	padding: 60px;
+	background: #ffffb6;
 
-	@media screen and ( min-width: 650px ) {
+	@media screen and (min-width: 650px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-$spacing: 20px;
+$spacing: 2em;
+$plus-size: 100px;
 
 .idea {
-	border: 1px solid #ccc;
+	box-shadow: 15px 15px 0px rgba(0,0,0,0.2);
+	padding: $spacing;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
 
-	* {
-		margin-left: $spacing;
-		margin-right: $spacing;
-	}
-
-	.idea-image {
-		margin: 0;
-		margin-bottom: $spacing;
+	&:last-child {
+		&::before {
+			content: '+';
+			position: absolute;
+			top: 50%;
+			font-size: $plus-size;
+			margin-top: -($plus-size / 2);
+			line-height: 1;
+			left: -.75em;
+			color: #ff4633;
+			font-weight: bold;
+			text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+		}
 	}
 }
 
+.idea-tags {
+	align-self: flex-start;
+	font-size: 0.9rem;
+	margin-bottom: 1em;
+	margin-left: -.3em;
+
+	span {
+		border: 1px solid;
+		display: inline-block;
+		margin: 0.3em;
+		padding: 0.25em 1em;
+	}
+}
+
+.idea-title {
+	width: 100%;
+	align-self: flex-start;
+}
+
 .idea-image {
-	display: block;
-	max-width: 100%;
+	mix-blend-mode: color-burn;
+	opacity: 0.1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.idea-description {
+	margin-top: 0;
+	margin-bottom: $spacing;
 }
 
 .idea-learnmore,
 .ideas-button {
-	background: #284763;
+	background: #2a3144;
+	box-shadow: 5px 5px 0px darken(#2a3144, 10%);
 	border-radius: 5px;
 	color: #fff;
 	display: inline-block;
 	text-decoration: none;
-	padding: .5em 1em;
-	margin-bottom: $spacing;
+	padding: 0.5em 1em;
+	margin-bottom: 0;
+	align-self: flex-end;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .ideas-button {
+	background: #d3321c;
 	margin-top: $spacing;
 	border: none;
+}
+
+$grad-rotate: 175deg;
+$grad-stop: 20%;
+
+$grad-color: #9455e4;
+
+.tag-javascript {
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 20%) ($grad-stop + .1));
+	color: #fff;
+}
+
+$grad-color: #42a39e;
+
+.tag-css {
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + .1));
+	color: #fff;
 }

@@ -1,39 +1,16 @@
-# Student Site Boilerplate
+# Idea Generator
 
-Student Site Boilerplate aims to introduce new web development students to
-modern build tools in a simplified manner. The goal of this project is to
-be able to build and deploy a simple static site right to Github and allow
-students to explore Sass and ES6 without worrying about setting up Babel,
-Webpack, or other build tools.
+This Idea Generator app fetches bookmarks from your collection on raindrops.io and creates an idea generator from them.
 
-[Static Site Boilerplate](http://staticsiteboilerplate.com//) is used as a
-starting point for its utility and relative simplicity. All commands are run
-through npm scripts so additional technologies like Grunt, Gulp, Yarn, etc.
-don't have to be taught. Github Pages is used to reduce the overhead of trying
-to find hosting for student projects, and keep progress in one place.
+## Requirements
 
-Other modifications include simplifying the output from Webpack to errors
-only so students aren't wading through a pile of success messages to find
-out if their build has successfully deployed to Github Pages and adding HTML5
-linting.
+You will need to add a .env file with your oAuth token in the root of the project. Use the `OAUTH_TOKEN` variable like so:
 
-**Static Site Boilerplate Documentation:** [https://docs.staticsiteboilerplate.com/](https://docs.staticsiteboilerplate.com/)
+```
+OAUTH_TOKEN=YOUR-TOKEN-HERE
+```
 
-The Student Site Boilerplate is part of a lesson in my web design and development class,
-and I teach Github, Tower, and VSCode alongside this boilerplate. If you are interested
-in the documentation for this process and setting up your development environment in the
-same way, you can follow along with [this Google Doc](https://docs.google.com/document/d/14usTx6c1L1MwSjRvwtk4spz40EDgHV50_53kKAiHzcM/edit?usp=sharing).
-
-## Prerequisites
-
-- [Node.js and npm (Node Package Manager)](https://nodejs.org/en/) - this repository has been tested through 12.19.0 LTS. Windows users, be sure to check the "Install additional tools" checkbox during your installation process.
-- A code editor of your choice, such as [VSCode](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/)
-- A way to connect to and work with Git and Github. If you like having a user interface to do this, I recommend (and personally use) [Tower](https://www.git-tower.com/students/mac). (A Windows version is also available!)
-
-## Notes for Windows users
-
-- Your computer may use different linebreaks than ESLint expects. [You can add a comment to fix this.](https://stackoverflow.com/questions/37826449/expected-linebreaks-to-be-lf-but-found-crlf-linebreak-style)
-- If you see errors with Sass on your first build, try running `npm rebuild node-sass`.
+See [Raindrop.io's API documentation](https://developer.raindrop.io/v1/authentication/token) for more details.
 
 ## Installation
 
@@ -42,7 +19,7 @@ Clone or download this repository using your favorite method (Command Line, GUI 
 Change directory to this repository on your computer (path may be different depending on where the repository is located):
 
  ```bash
-cd student-site-boilerplate
+cd idea-generator
  ```
 
 Run `npm install` to install development dependencies, then see `Usage` below.
@@ -78,8 +55,6 @@ Run `npm install` to install development dependencies, then see `Usage` below.
 * Internet Explorer 9+
 * Opera _\(latest 2\)_
 * Safari _\(latest 2\)_
-
-_This  is fully dependent on your code and doesn't mean that Static Site Boilerplate won't work in older browsers, just that we'll ensure compatibility with the ones mentioned above._
 
 ## License
 
