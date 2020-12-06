@@ -13,7 +13,7 @@ $tablet-vertical: 768px;
 $desktop: 1200px;
 
 body {
-	background: #2a3144;
+	background: #1a1333;
 	color: #fff;
 	font-family: 'Encode Sans', sans-serif;
 	font-size: 18px;
@@ -45,7 +45,7 @@ strong {
 	min-height: 500px;
 	margin: 30px auto;
 	padding: 60px;
-	background: #ffffb6;
+	background: #ffc763;
 
 	@media screen and (min-width: 650px) {
 		grid-template-columns: repeat(2, 1fr);
@@ -100,7 +100,7 @@ $plus-size: 100px;
 
 .idea-image {
 	mix-blend-mode: color-burn;
-	opacity: 0.1;
+	opacity: 0.2;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -118,7 +118,7 @@ $plus-size: 100px;
 .idea-learnmore,
 .ideas-button {
 	background: #2a3144;
-	box-shadow: 5px 5px 0 darken(#2a3144, 10%);
+	box-shadow: 5px 5px 0 darken(#1a1333, 10%);
 	border-radius: 5px;
 	color: #fff;
 	display: inline-block;
@@ -133,7 +133,7 @@ $plus-size: 100px;
 }
 
 .ideas-button {
-	background: #d3321c;
+	background: #EA0F46;
 	margin-top: $spacing;
 	border: none;
 }
@@ -141,16 +141,50 @@ $plus-size: 100px;
 $grad-rotate: 175deg;
 $grad-stop: 20%;
 
-$grad-color: #9455e4;
+$grad-color: #700460;
 
 .tag-javascript {
-	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 20%) ($grad-stop + 0.1));
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 5%) ($grad-stop + 0.1), #1a1333 90%);
 	color: #fff;
+
+	.idea-learnmore {
+		background: $grad-color;
+		box-shadow: 5px 5px 0 darken($grad-color, 20%);
+	}
 }
 
-$grad-color: #42a39e;
+$grad-color: #087353;
 
 .tag-css {
-	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + 0.1));
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 5%) ($grad-stop + 0.1), #045459 90%);
 	color: #fff;
+
+	.idea-learnmore {
+		background: $grad-color;
+		box-shadow: 5px 5px 0 darken($grad-color, 20%);
+	}
+}
+
+$grad-color: #EA0F46;
+
+.tag-aesthetics {
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + 0.1), #022c7a 90%);
+	color: #fff;
+
+	.idea-learnmore {
+		background: $grad-color;
+		box-shadow: 5px 5px 0 darken($grad-color, 20%);
+	}
+}
+
+$grad-color: #0F875D;
+
+.tag-design {
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + 0.1), #700460 90%);
+	color: #fff;
+
+	.idea-learnmore {
+		background: $grad-color;
+		box-shadow: 5px 5px 0 darken($grad-color, 20%);
+	}
 }
