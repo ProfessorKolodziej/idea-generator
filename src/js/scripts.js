@@ -72,28 +72,27 @@ function getData() {
       Authorization: `Bearer ${process.env.OAUTH_TOKEN}`,
     },
   })
-  .then((response) => response.json())
-  .then((data) => {
-
+    .then((response) => response.json())
+    .then((data) => {
     // Store the data initially, then append items from later queries.
-    if (storedData === null) {
-      storedData = data;
-    } else {
-      let tempArray = storedData.items.concat(data.items);
-      storedData.items = tempArray;
-    }
+      if (storedData === null) {
+        storedData = data;
+      } else {
+        const tempArray = storedData.items.concat(data.items);
+        storedData.items = tempArray;
+      }
 
-    // Get items recursively until we run out of pages.
-    // Then, cache and store it.
-    if (data.items.length === itemLimit) {
-      page++;
-      getData();
-    } else {
+      // Get items recursively until we run out of pages.
+      // Then, cache and store it.
+      if (data.items.length === itemLimit) {
+        page += 1;
+        getData();
+      } else {
       // Cache in localStorage and expire it weekly.
-      localCache.setItem('apiData', storedData, 10080);
-      addMarkup();
-    }
-  });
+        localCache.setItem('apiData', storedData, 10080);
+        addMarkup();
+      }
+    });
 }
 
 // Check if the data has been saved

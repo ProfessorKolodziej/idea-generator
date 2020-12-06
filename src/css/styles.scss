@@ -56,7 +56,7 @@ $spacing: 2em;
 $plus-size: 100px;
 
 .idea {
-	box-shadow: 15px 15px 0px rgba(0,0,0,0.2);
+	box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.2);
 	padding: $spacing;
 	position: relative;
 	z-index: 1;
@@ -71,10 +71,10 @@ $plus-size: 100px;
 			font-size: $plus-size;
 			margin-top: -($plus-size / 2);
 			line-height: 1;
-			left: -.75em;
+			left: -0.75em;
 			color: #ff4633;
 			font-weight: bold;
-			text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+			text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
 		}
 	}
 }
@@ -83,7 +83,7 @@ $plus-size: 100px;
 	align-self: flex-start;
 	font-size: 0.9rem;
 	margin-bottom: 1em;
-	margin-left: -.3em;
+	margin-left: -0.3em;
 
 	span {
 		border: 1px solid;
@@ -118,7 +118,7 @@ $plus-size: 100px;
 .idea-learnmore,
 .ideas-button {
 	background: #2a3144;
-	box-shadow: 5px 5px 0px darken(#2a3144, 10%);
+	box-shadow: 5px 5px 0 darken(#2a3144, 10%);
 	border-radius: 5px;
 	color: #fff;
 	display: inline-block;
@@ -144,13 +144,13 @@ $grad-stop: 20%;
 $grad-color: #9455e4;
 
 .tag-javascript {
-	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 20%) ($grad-stop + .1));
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 20%) ($grad-stop + 0.1));
 	color: #fff;
 }
 
 $grad-color: #42a39e;
 
 .tag-css {
-	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + .1));
+	background: linear-gradient($grad-rotate, $grad-color 0%, $grad-color $grad-stop, darken($grad-color, 10%) ($grad-stop + 0.1));
 	color: #fff;
 }
