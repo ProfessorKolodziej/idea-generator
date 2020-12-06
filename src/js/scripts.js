@@ -9,10 +9,41 @@ let storedData = localCache.getItem('apiData');
 const container = document.querySelector('#js-ideasResults');
 const button = document.querySelector('#js-ideasButton');
 
+// Goal: Return HTML with tags from item data
+function createTagMarkup(item) {
+  let tagMarkup = '';
+
+  item.tags.forEach(
+    tag => {
+      console.log(tag);
+      tagMarkup += `<span>${tag}</span>`;
+    }
+  );
+
+  return tagMarkup;
+}
+
+// Goal: Return HTML with tags from item data
+function createClasses(item) {
+  let classes = '';
+
+  item.tags.forEach(
+    tag => {
+      classes += ` tag-${tag}`;
+    }
+  );
+
+  return classes;
+}
+
 // Goal: Return HTML with data from item
 function createIdeaMarkup(item) {
+  const ideaTags = createTagMarkup(item);
+  const ideaClasses = createClasses(item);
+
   // Goal: Create a template for my idea result
-  const ideaTemplate = `<article class="idea">
+  const ideaTemplate = `<article class="idea ${ideaClasses}">
+      <div class="idea-tags">${ideaTags}</div>
       <img src="${item.media[0].link}" alt="Thumbnail for ${item.title}" class="idea-image" />
       <h2 class="idea-title">${item.title}</h2>
       <p class="idea-description">${item.excerpt}</p>
@@ -41,7 +72,7 @@ function addMarkup() {
 }
 
 function getData() {
-  fetch('https://api.raindrop.io/rest/v1/raindrops/13023541?perpage=50', {
+  fetch('https://api.raindrop.io/rest/v1/raindrops/15045214?perpage=50', {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${process.env.OAUTH_TOKEN}`,
@@ -49,8 +80,8 @@ function getData() {
   })
     .then((response) => response.json())
     .then((data) => {
-    // Goal: Save the data
       console.log(data);
+      // Goal: Save the data
       storedData = data;
       localCache.setItem('apiData', storedData);
       addMarkup();
@@ -58,18 +89,10 @@ function getData() {
 }
 
 // Check if the data has been saved
-if (storedData === null) {
-  console.log('Fetching data');
+if (storedData === null || storedData.auth === false) {
   getData();
 } else {
-  console.log('It was stored');
-  console.log(storedData);
   addMarkup();
 }
 
 button.addEventListener('click', addMarkup);
-
-// Goal: showing TWO random bookmarks from my stored data
-// Do this each time the button is clicked
-// Goal: Change button text to "Generate Again" after initial click
-// Goal: Add my results to js-ideasResults
