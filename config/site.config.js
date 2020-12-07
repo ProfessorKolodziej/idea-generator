@@ -9,13 +9,13 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'Student Site Boilerplate',
+  site_name: 'Design & Development Inspiration Generator',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'A modern static site workflow for modern students of web development, simplified for easier learning.',
+  site_description: 'An idea generator which pulls together aesthetic ideas, CSS, and JavaScript to get you thinking.',
 
   // Your website's URL, used for sitemap
-  site_url: 'https://professorkolodziej.github.io/static-site-boilerplate/',
+  site_url: 'https://professorkolodziej.github.io/idea-generator/',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
