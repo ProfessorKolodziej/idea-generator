@@ -38,7 +38,7 @@ function createIdeaMarkup(item) {
       <img src="${item.media[0].link}" alt="Thumbnail for ${item.title}" class="idea-image" />
       <h2 class="idea-title">${item.title}</h2>
       <p class="idea-description">${item.excerpt}</p>
-      <a href="${item.link}" class="idea-learnmore">Learn more about ${item.title}</a>
+      <a href="${item.link}" target="_blank" class="idea-learnmore">Learn more about ${item.title}</a>
     </article>`;
 
   return ideaTemplate;
