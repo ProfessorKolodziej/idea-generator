@@ -1,7 +1,7 @@
 {
-  "name": "Student Site Boilerplate",
-  "short_name": "Student Site Boilerplate",
-  "description": "A modern static site workflow for modern students of web development, simplified for easier learning.",
+  "name": "Design & Development Inspiration Generator",
+  "short_name": "Design & Development Inspiration Generator",
+  "description": "An idea generator which pulls together aesthetic ideas, CSS, and JavaScript to get you thinking.",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
